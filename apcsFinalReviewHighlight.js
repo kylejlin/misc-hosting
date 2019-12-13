@@ -9,9 +9,9 @@ document.querySelectorAll("pre.code").forEach(block => {
 });
 
 function startSnowflakes() {
-  stopSnowflakes();
-
-  window.snowflakes = new Snowflakes();
+  if (!window.snowflakes) {
+    window.snowflakes = new Snowflakes();
+  }
 }
 
 function stopSnowflakes() {
